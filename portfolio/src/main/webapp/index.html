@@ -8,8 +8,30 @@
   </head>
 
 <body>
-    <div class = "wrapper" id="first section">
-        
+     <!-- 
+    <div class="topnav">
+        <a href="#Top">Top</a>
+        <a class = "active" href="#aboutMe">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Work Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#freeTime">Free Time</a>
+    </div>
+    -->
+
+    <nav>
+        <ul id="mainNav">
+        <li><a href="#top">Back to Top</a></li>
+        <li><a href="#aboutMe">About Me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Work Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#freeTime">Free Time</a></li>
+        </ul>
+    </nav>
+    
+    <section id="top">
+    <div class = "wrapper" id="first section"> 
         <div class= "left"> 
             <div class="image-thumbnails">
                 <img src="images/grandP.jpg"/>
@@ -35,7 +57,9 @@
 
         </div>  
     </div>
+    </section>
 
+    <section id="aboutMe">
     <div class = "wrapper2" id = "AboutMe">  
         <h1>About Me</h1>
         <hr>
@@ -50,19 +74,23 @@
             </div>
         </div>
     </div>
+    </a>
+    </section>
 
-
+    <section id="skills">
+    <a class = "current" name="skills">
     <div class = "wrapper2" id = "Skills">
         <h1>Skills</h1>
         <hr>
 
         <div class = "skillImage">
                 <img src="images/Skills.png"/>
-        </div>
-
-        
+        </div>    
     </div>
+    </a>
+    </section>
     
+    <section id="experience">
     <div class = "wrapper2" id = "Work Experience">
         <h1>Work Experience</h2>       
         <hr>
@@ -113,7 +141,9 @@
         <br>
 
     </div>
+    </section>
     
+    <section id="projects">
     <div class = "wrapper2" id = "Projects">
         <h1>Projects</h1>
         <hr>
@@ -146,9 +176,10 @@
             </div>
             
         </div>
-
     </div>
+    </section>
 
+    <section id="freeTime">
     <div class = "wrapper2" id = "FreeTime">
         <h1>Free Time</h1>
         <hr>
@@ -226,6 +257,8 @@
             <span class="dot" onclick="currentSlide(8)"></span>
         </div>
     </div>
+    </section>
+
     <!--
     <div class = "wrapper">
         <p>Click here to get a random message:</p>

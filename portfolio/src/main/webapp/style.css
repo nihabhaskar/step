@@ -418,3 +418,52 @@ hr {
   from {opacity: .4}
   to {opacity: 1}
 }
+
+/* NAVIGATION BAR */
+
+nav {
+  position:fixed;
+  top:0;
+  left:0;
+  background:#93B7BE;
+  height:40px;
+  width:100%;
+  z-index: 1;
+}
+
+nav ul {
+    padding:0;
+    list-style:none;
+    position:relative;
+    display:table;
+    margin:0 auto;
+}
+
+nav ul li{
+    display:table-cell;
+}
+
+nav ul li a{
+    padding:10px 20px;
+    display:block;
+    color:white;
+    text-decoration:none;
+    transition:all 0.3s ease-in-out;
+}
+
+nav ul li a:hover{
+    color:#785964;
+}
+         
+nav a.active{
+    color:#D5C7BC;
+    border-bottom:3px solid #D5C7BC;
+}
+
+section{
+  position:relative;
+  margin: 0;
+  padding: 0;  
+  display:block;
+  z-index: 0;
+}
