@@ -5,10 +5,14 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <script src="nav.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   </head>
 
 <body>
-     <!-- 
+    
+    <!-- NAVIGATION BAR -->
+    <!-- 
     <div class="topnav">
         <a href="#Top">Top</a>
         <a class = "active" href="#aboutMe">About Me</a>
@@ -21,15 +25,16 @@
 
     <nav>
         <ul id="mainNav">
-        <li><a href="#top">Back to Top</a></li>
-        <li><a href="#aboutMe">About Me</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Work Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#freeTime">Free Time</a></li>
+            <li><a href="#top">Back to Top</a></li>
+            <li><a href="#aboutMe">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Work Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#freeTime">Free Time</a></li>
         </ul>
     </nav>
     
+    <!-- TOP OF PAGE SECTION -->
     <section id="top">
     <div class = "wrapper" id="first section"> 
         <div class= "left"> 
@@ -49,9 +54,18 @@
 
             <div class = "social-links">
                 <ul>
-                    <li><a href="https://github.com/nihabhaskar">Github</a></li>
-                    <li><a href="https://www.linkedin.com/in/niharika-bhaskar/">LinkedIn</a></li>
-                    <li><a href="mailto:n2bhaska@ucsd.edu">Email</a></li>
+                    <li><a href="https://github.com/nihabhaskar">
+                            <i class="fab fa-github" style="font-size:40px;color:#f4f3f3"></i>    
+                        </a>
+                    </li>
+                    <li><a href="https://www.linkedin.com/in/niharika-bhaskar/">
+                            <i class="fab fa-linkedin" style="font-size:40px;color:#f4f3f3"></i>
+                        </a>
+                    </li>
+                    <li><a href="mailto:n2bhaska@ucsd.edu">
+                            <i class="fa fa-envelope" style="font-size:40px;color:#f4f3f3"></i>
+                        </a>
+                    </li>
                 </ul>
             </div> 
 
@@ -59,6 +73,7 @@
     </div>
     </section>
 
+    <!-- ABOUT ME -->
     <section id="aboutMe">
     <div class = "wrapper2" id = "AboutMe">  
         <h1>About Me</h1>
@@ -77,6 +92,7 @@
     </a>
     </section>
 
+    <!-- SKILLS -->
     <section id="skills">
     <a class = "current" name="skills">
     <div class = "wrapper2" id = "Skills">
@@ -90,6 +106,7 @@
     </a>
     </section>
     
+    <!-- WORK EXPERIENCE -->
     <section id="experience">
     <div class = "wrapper2" id = "Work Experience">
         <h1>Work Experience</h2>       
@@ -143,6 +160,7 @@
     </div>
     </section>
     
+    <!-- PROJECTS -->
     <section id="projects">
     <div class = "wrapper2" id = "Projects">
         <h1>Projects</h1>
@@ -156,8 +174,10 @@
                 <h2>Application for the Central California Almond Growers Association</h2>
                 <p>Almounds is an application designed for the Central California Almond Growers Association (CCAGA) in order to make the lives of workers and administrators exponentially easier and more organized by streamlining tasks that are normally done by hand. The application offers a dynamic grid that allows for updates pending the filling and emptying of stockpiles, utilizing an algorithm that optimizes resources when a dropoff location is obtained for a truckload, and providing an all-in-one organized user interface for the workers and administrators at CCAGA.</p>
             </div>
-
-            <img src="images/almounds.png"/>
+            
+            <div class = "projectImage" >
+                <img src="images/almounds.png"/>
+            </div>
 
         </div>
 
@@ -171,14 +191,15 @@
                 <p>During ERSP, we conducted an experiment that analyzed shifts of IPv4 addresses away from Africa to identify organizations that may be misappropriating unused AFRINIC IPv4 addresses. We were able to conduct multiple experiments to explore the properties that make an IP address considered suspicious by gathering and comparing data from 3 datasets: Delegation files, BGP Data, and WHOIS data. Using the information from each dataset, we were able to first create scripts that analyzed address blocks that should be in Africa and then determined, through the BGP data announcements who the actual owner of the address block was and if verify if it was truly in use in Africa.</p>
             </div>
 
-            <div class = "gImage">
+            <div class = "projectImage">
                 <img src="images/claffy.png"/>
             </div>
-            
+
         </div>
     </div>
     </section>
 
+    <!-- FREE TIME -->
     <section id="freeTime">
     <div class = "wrapper2" id = "FreeTime">
         <h1>Free Time</h1>
@@ -191,51 +212,57 @@
 
             <!-- Full-width images with number and caption text -->
             <div class="mySlides fade" style="display: block;">
-                <div class="numbertext">1 / 8</div>
+                <div class="numbertext">1 / 9</div>
                 <img src="slideshow/family.jpg" style="width:100%">
                 <div class="text">Hiking Potato Chip Rock with my Family.</div>
             </div>
 
             <div class="mySlides fade">
-                <div class="numbertext">2 / 8</div>
+                <div class="numbertext">2 / 9</div>
                 <img src="slideshow/rainier.jpg" style="width:100%">
                 <div class="text">A view from hiking around Mt.Rainier</div>
             </div>
 
             <div class="mySlides fade">
-                <div class="numbertext">3 / 8</div>
+                <div class="numbertext">3 / 9</div>
                 <img src="slideshow/iscream.jpg" style="width:100%">
                 <div class="text">I love making &#38 eating icecream</div>
             </div>
 
             <div class="mySlides fade">
-                <div class="numbertext">4 / 8</div>
+                <div class="numbertext">4 / 9</div>
                 <img src="slideshow/crater.jpg" style="width:100%">
                 <div class="text">Hiking around Crater Lake.</div>
             </div>
 
             <div class="mySlides fade">
-                <div class="numbertext">5 / 8</div>
+                <div class="numbertext">5 / 9</div>
                 <img src="slideshow/pizzaparty.jpg" style="width:100%">
                 <div class="text">A pizza making party with friends.</div>
             </div>
 
             <div class="mySlides fade">
-                <div class="numbertext">6 / 8</div>
+                <div class="numbertext">6 / 9</div>
                 <img src="slideshow/bread.jpg" style="width:100%">
                 <div class="text">I love baking, here is a loaf of bread I made recently.</div>
             </div>
 
             <div class="mySlides fade">
-                <div class="numbertext">7 / 8</div>
+                <div class="numbertext">7 / 9</div>
                 <img src="slideshow/hawaii.jpg" style="width:100%">
                 <div class="text">Enjoying views of Mauna Loa In Hawaii.</div>
             </div>
 
             <div class="mySlides fade">
-                <div class="numbertext">8 / 8</div>
+                <div class="numbertext">8 / 9</div>
                 <img src="slideshow/roommates.jpg" style="width:100%">
                 <div class="text">Late night ice scream eating with friends.</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">9 / 9</div>
+                <img src="slideshow/ruby.jpg" style="width:100%">
+                <div class="text">Walking along Ruby Beach in Olympic National Park.</div>
             </div>
 
             <!-- Next and previous buttons -->
@@ -255,6 +282,7 @@
             <span class="dot" onclick="currentSlide(6)"></span>
             <span class="dot" onclick="currentSlide(7)"></span>
             <span class="dot" onclick="currentSlide(8)"></span>
+            <span class="dot" onclick="currentSlide(9)"></span>
         </div>
     </div>
     </section>
