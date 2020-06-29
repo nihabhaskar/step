@@ -5,32 +5,291 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <script src="nav.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   </head>
 
 <body>
-    <div class = "wrapper">
+    
+    <!-- NAVIGATION BAR -->
+    <!-- 
+    <div class="topnav">
+        <a href="#Top">Top</a>
+        <a class = "active" href="#aboutMe">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Work Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#freeTime">Free Time</a>
+    </div>
+    -->
+
+    <nav>
+        <ul id="mainNav">
+            <li><a href="#top">Back to Top</a></li>
+            <li><a href="#aboutMe">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Work Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#freeTime">Free Time</a></li>
+        </ul>
+    </nav>
+    
+    <!-- TOP OF PAGE SECTION -->
+    <section id="top">
+    <div class = "wrapper" id="first section"> 
         
+        <!--
         <div class= "left"> 
             <div class="image-thumbnails">
                 <img src="images/grandP.jpg"/>
             </div>
-            <h1>Niharika Bhaskar</h1>
-            <h4>Computer Science Student</h4>
+            <p class = "nametext">Niharika Bhaskar</p>
+            <p class = "titletext">Computer Science Student</p>
         </div>
+        -->
     
         <div class = "right">
-            <p>
-                Hi! My name is Niha I am a student at UCSD majoring in Computer Science and minoring in Economics.
-            </p>
+            <div class = "bio">
+                <p class = "biotext"> 
+                    Hello, my name is Niha. 
+                </p>
+            </div>
+
             <div class = "social-links">
                 <ul>
-                    <li><a href="https://github.com/nihabhaskar">Github</a></li>
-                    <li><a href="https://www.linkedin.com/in/niharika-bhaskar/">LinkedIn</a></li>
+                    <li><a href="https://github.com/nihabhaskar">
+                            <i class="fab fa-github" style="font-size:40px;color:#f4f3f3"></i>    
+                        </a>
+                    </li>
+                    <li><a href="https://www.linkedin.com/in/niharika-bhaskar/">
+                            <i class="fab fa-linkedin" style="font-size:40px;color:#f4f3f3"></i>
+                        </a>
+                    </li>
+                    <li><a href="mailto:n2bhaska@ucsd.edu">
+                            <i class="fa fa-envelope" style="font-size:40px;color:#f4f3f3"></i>
+                        </a>
+                    </li>
                 </ul>
-            
-        </div>   
+            </div> 
+
+        </div>  
     </div>
+    </section>
+
+    <!-- ABOUT ME -->
+    <section id="aboutMe">
+    <div class = "wrapper2" id = "AboutMe">  
+        <h1>About Me</h1>
+        <hr>
+
+        <div class = "leftAbout" id= "About Section">
+            <p> My name is Niharika Bhaskar and I am from San Diego and am now a rising 3rd year at the University of California, San Diego majoring in Computer Science and minoring in Economics. On campus I am a tutor in the CSE department, an active SWE member, and a yoga instructor. I love traveling to National Parks, I have been to 35, and it is on my bucket list to visit them all. I also enjoy tasting and making my own ice cream and love experimenting with weird flavor combinations. In my free time you will probably find me drinking kombucha, hiking, snorkeling, cooking, and spending time with my friends & family.</p>
+        </div>
+
+         <div class= "rightAbout"> 
+            <div class = "gImage">
+                <img src="images/googleP.jpg"/>
+            </div>
+        </div>
+    </div>
+    </a>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+    <a class = "current" name="skills">
+    <div class = "wrapper2" id = "Skills">
+        <h1>Skills</h1>
+        <hr>
+
+        <div class = "skillImage">
+                <img src="images/Skills.png"/>
+        </div>    
+    </div>
+    </a>
+    </section>
     
+    <!-- WORK EXPERIENCE -->
+    <section id="experience">
+    <div class = "wrapper2" id = "Work Experience">
+        <h1>Work Experience</h2>       
+        <hr>
+        
+        <h2>Takeda Pharmeceutical Company</h2> 
+        <h3>Informatics Intern</h3>
+        <h4>March 2019 - March 2020</h4>
+        <br>
+        <li>Optimized scientist chemical inventory by developing a SQL database to reduce and narrow searh results.</li>
+        <li>Built and organized multiple databases of data for scientists using ORACLE SQL developer.</li>
+        <li>Created templates for scientists to report data more effectively using VBA.</li>
+        <li>Developed features for the TakedaWiki application using PHP, implemented using the MediaWiki framework.</li>
+        <br>
+
+        <h2>University of California, San Diego</h2> 
+        <h3>CSE Department Tutor</h3>
+        <h4>December 2019 - Present</h4>
+        <br>
+        <li>Tutors Advanced Data Structures Course &#38; Introduction to Java/OOP</li>
+        <li>Provides assitance fro students to understand various Data Structures Concepts using C++.</li>
+        <li>Assists professors in conducting exams, writing course material, and other classroom activites.</li>
+        <br>
+
+        <h2>Center for Applied Internet Data Analysis</h2> 
+        <h3>Undergraduate Researcher</h3>
+        <h4>September 2020 - June 2020</h4>
+        <br>
+        <li>Conducts researcg to obersve dsibtion of IPv4 addresses in AFRINIC address spaces using Pyhton Juypter Notebooks.</li>
+        <li>Through the analysis of various datasets isolated suspicious IPv4 address blocks.</li>
+        <br>
+        
+        <h2>Northrop Grumman</h2> 
+        <h3>Computer Engineering Intern</h3>
+        <h4>Febuary 2018 - June 2018</h4>
+        <br>
+        <li>Worked for software enginnering group on NATO Alliance Groun Surviellance prject, emphasis on computer science and management.</li>
+        <li>Used Git, continuous integration and static analysis to develop software for the UC2 project, writing code coverage in C++ in VS.</li>
+        <li>Presented to a team of 15 about Robot Framework, described generic test automation framework for acceptance test-driven development.</li>
+        <br>
+
+        <h2>Coding the Future</h2> 
+        <h3>Board Member, Co-Founder, President 2017-2019</h3>
+        <h4>July 2016 - Present</h4>
+        <br>
+        <li>Non-profit organization focused on providing omputer science and coding opportunies withinn the community for students.</li>
+        <li>Taugh Java, Python, and SRATCH to arpund 800 students at avrious elementary &#38; middle schools, and libraris in the San Diego area.</li>
+        <li>Responsible for conducitng meetings, planning curriculum, recruiting new volunteers, organizing fundraisers, handling funds, and managing 80+ members from over 7 highschools.</li>
+        <br>
+
+    </div>
+    </section>
+    
+    <!-- PROJECTS -->
+    <section id="projects">
+    <div class = "wrapper2" id = "Projects">
+        <h1>Projects</h1>
+        <hr>
+        <br>
+        <br>
+        <div class = "wrapper3" id = "Almounds">
+            
+            <div class = "projL">
+                <h1>Almounds</h1>
+                <h2>Application for the Central California Almond Growers Association</h2>
+                <p>Almounds is an application designed for the Central California Almond Growers Association (CCAGA) in order to make the lives of workers and administrators exponentially easier and more organized by streamlining tasks that are normally done by hand. The application offers a dynamic grid that allows for updates pending the filling and emptying of stockpiles, utilizing an algorithm that optimizes resources when a dropoff location is obtained for a truckload, and providing an all-in-one organized user interface for the workers and administrators at CCAGA.</p>
+            </div>
+            
+            <div class = "projectImage" >
+                <img src="images/almounds.png"/>
+            </div>
+
+        </div>
+
+        <br>
+        <br>
+        <div class = "wrapper3" id = "Claffy">
+            
+            <div class = "projL">
+                <h1>Investigation of AFRINIC IPv4 Address Theft</h1>
+                <h2>Early Research Scholars Program</h2>
+                <p>During ERSP, we conducted an experiment that analyzed shifts of IPv4 addresses away from Africa to identify organizations that may be misappropriating unused AFRINIC IPv4 addresses. We were able to conduct multiple experiments to explore the properties that make an IP address considered suspicious by gathering and comparing data from 3 datasets: Delegation files, BGP Data, and WHOIS data. Using the information from each dataset, we were able to first create scripts that analyzed address blocks that should be in Africa and then determined, through the BGP data announcements who the actual owner of the address block was and if verify if it was truly in use in Africa.</p>
+            </div>
+
+            <div class = "projectImage">
+                <img src="images/claffy.png"/>
+            </div>
+
+        </div>
+    </div>
+    </section>
+
+    <!-- FREE TIME -->
+    <section id="freeTime">
+    <div class = "wrapper2" id = "FreeTime">
+        <h1>Free Time</h1>
+        <hr>
+        <br>
+
+        <!-- SLIDESHOW -->
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade" style="display: block;">
+                <div class="numbertext">1 / 9</div>
+                <img src="slideshow/family.jpg" style="width:100%">
+                <div class="text">Hiking Potato Chip Rock with my Family.</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 9</div>
+                <img src="slideshow/rainier.jpg" style="width:100%">
+                <div class="text">A view from hiking around Mt.Rainier</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 9</div>
+                <img src="slideshow/iscream.jpg" style="width:100%">
+                <div class="text">I love making &#38 eating icecream</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 9</div>
+                <img src="slideshow/crater.jpg" style="width:100%">
+                <div class="text">Hiking around Crater Lake.</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">5 / 9</div>
+                <img src="slideshow/pizzaparty.jpg" style="width:100%">
+                <div class="text">A pizza making party with friends.</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">6 / 9</div>
+                <img src="slideshow/bread.jpg" style="width:100%">
+                <div class="text">I love baking, here is a loaf of bread I made recently.</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">7 / 9</div>
+                <img src="slideshow/hawaii.jpg" style="width:100%">
+                <div class="text">Enjoying views of Mauna Loa In Hawaii.</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">8 / 9</div>
+                <img src="slideshow/roommates.jpg" style="width:100%">
+                <div class="text">Late night ice scream eating with friends.</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">9 / 9</div>
+                <img src="slideshow/ruby.jpg" style="width:100%">
+                <div class="text">Walking along Ruby Beach in Olympic National Park.</div>
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        
+        <br>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+            <span class="dot" onclick="currentSlide(8)"></span>
+            <span class="dot" onclick="currentSlide(9)"></span>
+        </div>
+    </div>
+    </section>
+
     <!--
     <div class = "wrapper">
         <p>Click here to get a random message:</p>
@@ -43,4 +302,3 @@
 </body>
 
 </html>
-
