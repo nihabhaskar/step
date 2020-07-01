@@ -56,3 +56,41 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
+
+function getGreetingUsingArrowFunctions() {
+  fetch('/data').then(response => response.text()).then((quote) => {
+    document.getElementById('quote-container').innerText = quote;
+  });
+}
+
+function getData() {
+ fetch('/data').then(response => response.json()).then((stats) => {
+    // stats is an object, not a string, so we have to
+    // reference its fields to create HTML content
+
+    const statsListElement = document.getElementById('data-container');
+    statsListElement.innerHTML = '';
+    for(var i = 0; i < stats.length; i++) {
+        var comment = stats.split(',');
+        statsListElement.appendChild(
+            createListElement(comment[0] + "-" + comment[1]));
+    }
+    
+    /**
+    statsListElement.innerHTML = '';
+    statsListElement.appendChild(
+        createListElement('Fact 1: ' + stats[0]));
+    statsListElement.appendChild(
+        createListElement('Fact 2: ' + stats[1]));
+    statsListElement.appendChild(
+        createListElement('Fact 3: ' + stats[2]));
+        */
+  });
+}
+
+/** Creates an <li> element containing text. */
+function createListElement(text) {
+  const liElement = document.createElement('li');
+  liElement.innerText = text;
+  return liElement;
+}
