@@ -298,28 +298,31 @@
         <p> My name is Niharika Bhaskar, I am an incoming 3rd year at UCSD majoring in Computer Science and minoring in Economics.</p>
     </div>
     -->
-    <section id="Comments">
     
+    <section id="Comments">
+    <div id="wrapper2" id = "comments">
        <!--<button onclick="getData()">Fun Fact</button>
       <body onload = "getData();">
       <div id="data-container"></div>
       <button onclick="getGreetingUsingArrowFunctions()">Fetch a quote!</button>
       <div id="quote-container"></div>
       -->
+      <body onload = "loadTasks()">
+      <h1>Comments</h1>
+      <br>
+
       <form action="/data" method="POST">
-      <div id="wrapper2" id = "comments">
-        <h1>Comments</h1>
-        <br>
         <label for="name">Name:</label><br>
         <input type="text" id="name" name="name"><br><br>
         <label for="comments">Comments:</label><br>
         <input type="text" id="comments" name="comments"><br><br>
         <input type="submit" value="Submit">
-        <body onload = "getData();">
-        <div id="data-container"></div>
-        </div>
       </form>
+       <hr/>
 
+    <ul id="task-list"></ul>
+
+    </div>
     </section>
 
 </body>
