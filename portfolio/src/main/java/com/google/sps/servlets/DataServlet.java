@@ -34,6 +34,8 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/data")
 public class DataServlet extends HttpServlet {
 
+    int numComments;
+
   @Override
   // LIST TASKS / COMMENTS
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -41,9 +43,10 @@ public class DataServlet extends HttpServlet {
     
     DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
     PreparedQuery results = datastore.prepare(query);
-    List<Task> tasks = new ArrayList<>();
+    List<Task> tasks = new ArrayList<>();                  
     
     for (Entity entity : results.asIterable()) {
+    //for( int i = 0; i < numComments ; i++) {
       long id = entity.getKey().getId();
       String name = (String) entity.getProperty("name");
       String comments = (String) entity.getProperty("comments");
@@ -79,6 +82,15 @@ public class DataServlet extends HttpServlet {
     String comments = request.getParameter("comments");
     long timestamp = System.currentTimeMillis();
     
+    numComments = getPlayerChoice(request);
+    
+    if (numComments == -1) {
+      response.sendRedirect("/index.html");
+      response.getWriter().println("Please enter an integer greater than 0.");
+      return;
+    }
+
+
     //messages.add(name + "," + comments);
     Entity taskEntity = new Entity("Task");
     taskEntity.setProperty("name", name);
@@ -111,6 +123,29 @@ public class DataServlet extends HttpServlet {
       return defaultValue;
     }
     return value;
+  }
+
+  /** Returns the choice entered by the player, or -1 if the choice was invalid. */
+  private int getPlayerChoice(HttpServletRequest request) {
+    // Get the input from the form.
+    String playerChoiceString = request.getParameter("player-choice");
+
+    // Convert the input to an int.
+    int playerChoice;
+    try {
+      playerChoice = Integer.parseInt(playerChoiceString);
+    } catch (NumberFormatException e) {
+      System.err.println("Could not convert to int: " + playerChoiceString);
+      return -1;
+    }
+
+    // Check that the input is between 1 and 3.
+    if (playerChoice < 1) {
+      System.err.println("Player choice is out of range: " + playerChoiceString);
+      return -1;
+    }
+
+    return playerChoice;
   }
 
 }

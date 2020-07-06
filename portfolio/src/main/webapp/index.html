@@ -9,7 +9,7 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   </head>
 
-<body>
+<body onload = "loadTasks()">
     
     <!-- NAVIGATION BAR -->
     <!-- 
@@ -31,6 +31,7 @@
             <li><a href="#experience">Work Experience</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#freeTime">Free Time</a></li>
+            <li><a href="#comments">Comments</a></li>
         </ul>
     </nav>
     
@@ -299,7 +300,7 @@
     </div>
     -->
     
-    <section id="Comments">
+    <section id="comments">
     <div id="wrapper2" id = "comments">
        <!--<button onclick="getData()">Fun Fact</button>
       <body onload = "getData();">
@@ -307,18 +308,22 @@
       <button onclick="getGreetingUsingArrowFunctions()">Fetch a quote!</button>
       <div id="quote-container"></div>
       -->
-      <body onload = "loadTasks()">
-      <h1>Comments</h1>
+      <h1 style="text-align:center; font-size: 35px; color: #1f222b; font-weight: bold; font-family: 'Roboto', sans-serif">Comments</h1>
+      <hr>
       <br>
 
-      <form action="/data" method="POST">
+      <form action="/data" method="POST" style="margin-left:75px"> 
         <label for="name">Name:</label><br>
         <input type="text" id="name" name="name"><br><br>
+
         <label for="comments">Comments:</label><br>
         <input type="text" id="comments" name="comments"><br><br>
-        <input type="submit" value="Submit">
+
+        <label for="numComments">Number of Comments:</label><br>
+        <input type="number" name="player-choice" min="1" value="1">
+
+        <input type="submit" value="Submit" style="margin-left:250px"> 
       </form>
-       <hr/>
 
     <ul id="task-list"></ul>
 

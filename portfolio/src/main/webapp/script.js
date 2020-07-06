@@ -57,11 +57,13 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
+/*
 function getGreetingUsingArrowFunctions() {
   fetch('/data').then(response => response.text()).then((quote) => {
     document.getElementById('quote-container').innerText = quote;
   });
 }
+*/
 
 function loadTasks() {
   fetch('/data').then(response => response.json()).then((tasks) => {
@@ -106,24 +108,27 @@ function createTaskElement(task) {
   taskElement.className = 'task';
 
   const nameElement = document.createElement('span');
-  titleElement.innerText = task.name;
+  var name = task.name.bold();
+  nameElement.innerHTML = name + "<br />" + task.comments;
 
   const deleteButtonElement = document.createElement('button');
   deleteButtonElement.innerText = 'Delete';
 
-  /*
-  const deleteButtonElement = document.createElement('button');
-  deleteButtonElement.innerText = 'Delete';
   deleteButtonElement.addEventListener('click', () => {
     deleteTask(task);
-  */
 
     // Remove the task from the DOM.
-    //taskElement.remove();
-  //});
+    taskElement.remove();
+  });
 
   taskElement.appendChild(nameElement);
   taskElement.appendChild(deleteButtonElement);
-  //taskElement.appendChild(deleteButtonElement);
   return taskElement;
+}
+
+/** Tells the server to delete the task. */
+function deleteTask(task) {
+  const params = new URLSearchParams();
+  params.append('id', task.id);
+  fetch('/delete-task', {method: 'POST', body: params});
 }
