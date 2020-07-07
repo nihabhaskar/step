@@ -510,8 +510,7 @@ input[type=submit]:hover {
   list-style-type: none;
 }
 
-.task {
-  border: thin solid black;
+.task {  
   display: flex;
   margin: 10px;
   padding: 10px;
