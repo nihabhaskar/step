@@ -6,10 +6,11 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
     <script src="nav.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2e6NZkMasOwEC1et7VznaQAdbU9NnlHE"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   </head>
 
-<body onload = "loadTasks()">
+<body onload = "loadTasks(); createMap()">
     
     <!-- NAVIGATION BAR -->
     <!-- 
@@ -31,6 +32,7 @@
             <li><a href="#experience">Work Experience</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#freeTime">Free Time</a></li>
+            <li><a href="#nationalParks">National Parks</a></li>
             <li><a href="#comments">Comments</a></li>
         </ul>
     </nav>
@@ -299,6 +301,19 @@
         <p> My name is Niharika Bhaskar, I am an incoming 3rd year at UCSD majoring in Computer Science and minoring in Economics.</p>
     </div>
     -->
+
+    <section id="nationalParks">
+    <div class="wrapper2" id="nationalParks">
+        <h1>National Parks</h1>
+        <hr>
+        <br>
+        <h3 style="text-align: center">Here is a map of all the national parks I have visited:</h3>
+        <br>
+        <div id="map"></div>
+        <br>
+        <br>
+    </div>
+    </section>
     
     <section id="comments">
     <div id="wrapper2" id = "comments">
