@@ -282,7 +282,7 @@ function createMap() {
   // Hawaii
   var hawaiiVolcMark = new google.maps.Marker({
     position: hawaiivolcanoes,
-    title:"Everglades"
+    title:"Hawaii Volcanoes"
   });  
   hawaiiVolcMark.setMap(map);
 
