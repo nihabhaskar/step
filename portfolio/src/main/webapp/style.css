@@ -529,3 +529,21 @@ input[type=submit]:hover {
   margin-right: auto;
 }
 
+table {
+  border-collapse: collapse;
+  width: 75%;
+}
+
+th {
+  text-align: left;
+}
+
+table, td, th {
+  border: 1px solid black;
+}
+
+.wrapcenter {
+    display:inline-block;
+    margin: 0 auto;
+}
+

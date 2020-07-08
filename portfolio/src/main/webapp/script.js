@@ -12,6 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
 /**
  * Adds a random greeting to the page.
  */
@@ -352,4 +355,30 @@ function createMap() {
     title:"Yellowstone"
   });  
   yellowstoneMark.setMap(map);
+}
+
+/** Creates a chart and adds it to the page. */
+function drawChart() {
+  const data = new google.visualization.DataTable();
+  data.addColumn('string', 'Genres');
+  data.addColumn('number', 'Count');
+        data.addRows([
+          ['Historical Fiction', 5],
+          ['Non Fiction', 8],
+          ['Fiction', 7],
+          ['Biography',3]
+        ]);
+
+  const options = {
+    chartArea:{left:0,top:0,width:"100%",height:"100%"},
+    'width':400,
+    'height':400,
+    is3D: true,
+    colors: ['#785964', '#ad929c', '#d1c0c6', '#ebe4e6'],
+    'backgroundColor': 'transparent'
+  };
+
+  const chart = new google.visualization.PieChart(
+      document.getElementById('chart-container'));
+  chart.draw(data, options);
 }
