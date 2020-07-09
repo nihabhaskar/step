@@ -46,7 +46,6 @@ public class DataServlet extends HttpServlet {
     List<Task> tasks = new ArrayList<>();                  
     
     for (Entity entity : results.asIterable()) {
-    //for( int i = 0; i < numComments ; i++) {
       long id = entity.getKey().getId();
       String name = (String) entity.getProperty("name");
       String comments = (String) entity.getProperty("comments");
@@ -59,21 +58,7 @@ public class DataServlet extends HttpServlet {
     Gson gson = new Gson();
     
     response.setContentType("application/json;");
-    //String json = convertToJsonUsingGson(messages);
     response.getWriter().println(gson.toJson(tasks));
-    /*
-    response.setContentType("text/html;");
-    response.getWriter().println("<h1>Hello Niha!</h1>");
-    */
-
-    // Create Arraylist of hard coded messages
-    
-    //messages.add("My favorite foods include dolmas, dark chocolate, and apricots.");
-    //messages.add("My favorite National Park is Denali National Park in Alaska.");
-    //messages.add("My favorite yoga styles include Vinyasa, Yin, and Iyengar.");
-
-    // Convert the server stats to JSON
-    // Send the JSON as the response
   }
 
   @Override
@@ -90,8 +75,6 @@ public class DataServlet extends HttpServlet {
       return;
     }
 
-
-    //messages.add(name + "," + comments);
     Entity taskEntity = new Entity("Task");
     taskEntity.setProperty("name", name);
     taskEntity.setProperty("comments", comments);
@@ -119,10 +102,7 @@ public class DataServlet extends HttpServlet {
    */
   private String getParameter(HttpServletRequest request, String name, String defaultValue) {
     String value = request.getParameter(name);
-    if (value == null) {
-      return defaultValue;
-    }
-    return value;
+    return value == null ? defaultValue : value;
   }
 
   /** Returns the choice entered by the player, or -1 if the choice was invalid. */

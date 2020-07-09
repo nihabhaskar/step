@@ -21,7 +21,6 @@ google.charts.setOnLoadCallback(drawChart);
 function addRandomFact() {
   const facts =
         ['I have been to 35 National parks', 'I enjoy eating and making ice cream', 'Sunflowers are my favorite flower'];
-      //['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
 
   // Pick a random greeting.
   const fact = facts[Math.floor(Math.random() * facts.length)];
@@ -63,13 +62,11 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
-/*
 function getGreetingUsingArrowFunctions() {
   fetch('/data').then(response => response.text()).then((quote) => {
     document.getElementById('quote-container').innerText = quote;
   });
 }
-*/
 
 function loadTasks() {
   fetch('/data').then(response => response.json()).then((tasks) => {
@@ -79,34 +76,6 @@ function loadTasks() {
     })
   });
 }
-
-/*
-function getData() {
- fetch('/data').then(response => response.json()).then((stats) => {
-    // stats is an object, not a string, so we have to
-    // reference its fields to create HTML content
-
-    const statsListElement = document.getElementById('data-container');
-    
-    // Build the list of history entries.
-    //const historyEl = document.getElementById('history');
-    stats.history.forEach((line) => {
-      statsListElement.appendChild(createListElement(line));
-    });
-  });
-    /*
-    statsListElement.innerHTML = '';
-    for(var i = 0; i < stats.length; i++) {
-        var comment = stats.split(',');
-        statsListElement.appendChild(
-            createListElement(comment[0] + "-" + comment[1]));
-    }  
-    statsListElement.innerHTML = '';
-    statsListElement.appendChild(
-        createListElement(stats[0]));
-  });
-  */
-//}
 
 /** Creates an element that represents a task, including its delete button. */
 function createTaskElement(task) {
@@ -362,12 +331,12 @@ function drawChart() {
   const data = new google.visualization.DataTable();
   data.addColumn('string', 'Genres');
   data.addColumn('number', 'Count');
-        data.addRows([
-          ['Historical Fiction', 5],
-          ['Non Fiction', 8],
-          ['Fiction', 7],
-          ['Biography',3]
-        ]);
+    data.addRows([
+        ['Historical Fiction', 5],
+        ['Non Fiction', 8],
+        ['Fiction', 7],
+        ['Biography',3]
+    ]);
 
   const options = {
     chartArea:{left:0,top:0,width:"100%",height:"100%"},
@@ -379,6 +348,6 @@ function drawChart() {
   };
 
   const chart = new google.visualization.PieChart(
-      document.getElementById('chart-container'));
+    document.getElementById('chart-container'));
   chart.draw(data, options);
 }
