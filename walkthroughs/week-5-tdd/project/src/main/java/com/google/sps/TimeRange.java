@@ -46,8 +46,8 @@ public final class TimeRange {
     }
   };
 
-  private final int start;
-  private final int duration;
+  private int start;
+  private int duration;
 
   private TimeRange(int start, int duration) {
     this.start = start;
@@ -67,6 +67,15 @@ public final class TimeRange {
   public int duration() {
     return duration;
   }
+
+  /**
+   * Sets the number of minutes between the start and end.
+   */
+  public void setDuration(int dur) {
+    duration = dur;
+  }
+
+  
 
   /**
    * Returns the end of the range. This ending value is the closing exclusive bound.
