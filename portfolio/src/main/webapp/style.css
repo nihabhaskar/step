@@ -245,7 +245,6 @@ hr {
 .rightAbout {
   align-items: right;
   justify-content: center;
-  /*margin: 50px;*/
 }
 
 .gImage {
@@ -296,7 +295,6 @@ hr {
     font-size: 18px;
     color: #f4f3f3;
     margin-left: 100px;
-    /*margin-right:400px;*/
     padding-top: 9px;
     font-family: 'Roboto', sans-serif;  
     font-weight: normal;
