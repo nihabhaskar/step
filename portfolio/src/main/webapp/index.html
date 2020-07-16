@@ -11,7 +11,7 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   </head>
 
-<body onload = "loadTasks(); createMap()">
+<body onload = "loadTasks(); createMap();">
 
     <nav>
         <ul id="mainNav">
@@ -198,57 +198,63 @@
 
             <!-- Full-width images with number and caption text -->
             <div class="mySlides fade" style="display: block;">
-                <div class="numbertext">1 / 9</div>
-                <img src="slideshow/family.jpg" style="width:100%">
+                <div class="numbertext">1 / 10</div>
+                <img src="slideshow/potato.jpg" style="width:100%">
                 <div class="text">Hiking Potato Chip Rock with my Family.</div>
             </div>
 
             <div class="mySlides fade">
-                <div class="numbertext">2 / 9</div>
+                <div class="numbertext">2 / 10</div>
                 <img src="slideshow/rainier.jpg" style="width:100%">
                 <div class="text">A view from hiking around Mt.Rainier</div>
             </div>
 
             <div class="mySlides fade">
-                <div class="numbertext">3 / 9</div>
-                <img src="slideshow/iscream.jpg" style="width:100%">
+                <div class="numbertext">3 / 10</div>
+                <img src="slideshow/icecream.jpg" style="width:100%">
                 <div class="text">I love making &#38 eating icecream</div>
             </div>
 
             <div class="mySlides fade">
-                <div class="numbertext">4 / 9</div>
+                <div class="numbertext">4 / 10</div>
                 <img src="slideshow/crater.jpg" style="width:100%">
                 <div class="text">Hiking around Crater Lake.</div>
             </div>
 
             <div class="mySlides fade">
                 <div class="numbertext">5 / 9</div>
-                <img src="slideshow/pizzaparty.jpg" style="width:100%">
+                <img src="slideshow/pizza.jpg" style="width:100%">
                 <div class="text">A pizza making party with friends.</div>
             </div>
 
             <div class="mySlides fade">
-                <div class="numbertext">6 / 9</div>
+                <div class="numbertext">6 / 10</div>
                 <img src="slideshow/bread.jpg" style="width:100%">
                 <div class="text">I love baking, here is a loaf of bread I made recently.</div>
             </div>
 
             <div class="mySlides fade">
-                <div class="numbertext">7 / 9</div>
+                <div class="numbertext">7 / 10</div>
                 <img src="slideshow/hawaii.jpg" style="width:100%">
                 <div class="text">Enjoying views of Mauna Loa In Hawaii.</div>
             </div>
 
             <div class="mySlides fade">
-                <div class="numbertext">8 / 9</div>
-                <img src="slideshow/roommates.jpg" style="width:100%">
+                <div class="numbertext">8 / 10</div>
+                <img src="slideshow/late.jpg" style="width:100%">
                 <div class="text">Late night ice scream eating with friends.</div>
             </div>
 
             <div class="mySlides fade">
-                <div class="numbertext">9 / 9</div>
+                <div class="numbertext">9 / 10</div>
                 <img src="slideshow/ruby.jpg" style="width:100%">
                 <div class="text">Walking along Ruby Beach in Olympic National Park.</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">10 / 10</div>
+                <img src="slideshow/kombucha.jpg" style="width:100%">
+                <div class="text">Taste testing kombucha!</div>
             </div>
 
             <!-- Next and previous buttons -->
@@ -269,6 +275,7 @@
             <span class="dot" onclick="currentSlide(7)"></span>
             <span class="dot" onclick="currentSlide(8)"></span>
             <span class="dot" onclick="currentSlide(9)"></span>
+            <span class="dot" onclick="currentSlide(10)"></span>
         </div>
     </div>
     </section>
@@ -304,15 +311,15 @@
         <h1>Books</h1>
         <hr>
         <br>
-        <h3 style="text-align: center">Recently Read Favorites:</h3>
+        <h3 style="text-align: left">Recently Read Favorites:</h3>
         <br>
 
-        <div class="wrapcenter" align='center' style="margin: auto; width: 100%;">
-
-          <div id="chart-container" style="float:left; width: 30%;" ></div>
+        <div class="wrapcenter" align='center' style="width: 100%; padding: 20px;">
         
           <div class="column" style="float:left; width: 70%;" >
            
+           
+
            <h4>Historical Fiction</h4>
            <ul style="width:100%">
                <li>The Vanishing Half</li>
@@ -353,11 +360,16 @@
             </ul>
 
           </div>
-        </div>
 
+          <div id="chart-container" style="float:left; width: 30%;" ></div>
+
+        </div>
         <br>
 
-        <div id="clear"></div>
+         <a class="goodreadsLink" href="https://www.goodreads.com/user/show/118012264-niharika-bhaskar">Checkout My GoodReads</a>
+
+        <br>
+        <br>
     </div>
     </section>
     
@@ -376,8 +388,10 @@
         <label for="comments">Comments:</label><br>
         <input type="text" id="comments" name="comments"><br><br>
 
+        <!--
         <label for="numComments">Number of Comments:</label><br>
         <input type="number" name="player-choice" min="1" value="1">
+        -->
 
         <input type="submit" value="Submit" style="margin-left:250px"> 
       </form>

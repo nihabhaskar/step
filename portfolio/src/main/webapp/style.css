@@ -194,7 +194,7 @@ html, body {
 }
 
 .wrapper2 li {
-    font-size: 18px;
+    font-size: 16px;
     color: #1f222b;
     margin-left: 140px;
     margin-right: 300px;
@@ -209,6 +209,15 @@ html, body {
     text-align: left;
     line-height: 1.5;
     color: #1f222b;
+}
+
+.wrapper2 a {
+    color: #785964;
+    font-size: 20px;
+}
+
+.wrapper2 a:hover, a:active {
+  background-color: #a4bcc4;
 }
 
 .center {
@@ -544,4 +553,8 @@ table, td, th {
 
 #clear {
     clear: both;
+}
+
+#goodreadsLink {
+    float:left;
 }

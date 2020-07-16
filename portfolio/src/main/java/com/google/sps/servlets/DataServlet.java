@@ -67,6 +67,7 @@ public class DataServlet extends HttpServlet {
     String comments = request.getParameter("comments");
     long timestamp = System.currentTimeMillis();
     
+    /*
     numComments = getPlayerChoice(request);
     
     if (numComments == -1) {
@@ -74,6 +75,7 @@ public class DataServlet extends HttpServlet {
       response.getWriter().println("Please enter an integer greater than 0.");
       return;
     }
+    */
 
     Entity taskEntity = new Entity("Task");
     taskEntity.setProperty("name", name);

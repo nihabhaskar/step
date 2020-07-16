@@ -110,6 +110,10 @@ function deleteTask(task) {
 
 /** Creates map */
 function createMap() {
+  const map = new google.maps.Map(
+      document.getElementById('map'),
+      {center: {lat: 46.87665, lng: -121.735556}, zoom: 3});
+  
   // Alaska
   var denali = new google.maps.LatLng(63.121372,-151.178617);
   var glacierbay = new google.maps.LatLng(58.7856,-136.9268);
@@ -158,10 +162,6 @@ function createMap() {
   // Wyoming
   var teton = new google.maps.LatLng(43.785527,-110.696789);
   var yellowstone = new google.maps.LatLng(44.413990,-110.602084);
-
-  const map = new google.maps.Map(
-      document.getElementById('map'),
-      {center: {lat: 46.87665, lng: -121.735556}, zoom: 3});
 
   // Alaska
   var denaliMark = new google.maps.Marker({
