@@ -163,167 +163,652 @@ function createMap() {
   var teton = new google.maps.LatLng(43.785527,-110.696789);
   var yellowstone = new google.maps.LatLng(44.413990,-110.602084);
 
+  // HAVE NOT BEEN //
+  
   // Alaska
-  var denaliMark = new google.maps.Marker({
+  var gates = new google.maps.LatLng(67.823341, -153.416829);
+  var katmai = new google.maps.LatLng(58.6054, -155.0795);
+  var kobuk = new google.maps.LatLng(67.324378, -159.141685);
+  var clark = new google.maps.LatLng(60.394000, -154.363396);
+  var wrangell = new google.maps.LatLng(61.720936, -143.093490);
+
+  // American Samoa
+  var samoa = new google.maps.LatLng(-14.260012, -170.682827);
+
+   //Arizona
+  var petrified = new google.maps.LatLng(34.886701, -109.746980);
+
+  //Arkansas
+  var springs = new google.maps.LatLng(34.522638, -93.043032);
+
+  // california
+  var channel = new google.maps.LatLng(33.979635, -119.805107);
+
+  // colorado
+  var black = new google.maps.LatLng(38.568397, -107.741012);
+  var dunes = new google.maps.LatLng(37.809958, -105.562620);
+  var mesa = new google.maps.LatLng(37.183180, -108.492330);
+  var rocky = new google.maps.LatLng(40.344891, -105.686101);
+
+  // florida
+  var tortugas = new google.maps.LatLng(24.628406, -82.873203);
+
+  // hawaii
+  var haleakala = new google.maps.LatLng(20.719238, -156.164239);
+
+  //kentucky
+  var mammoth = new google.maps.LatLng(37.189619, -86.100772);
+
+  // maine
+  var acadia = new google.maps.LatLng(44.349746, -68.273472);
+
+  //michagan
+  var isle = new google.maps.LatLng(47.981304, -88.916668);
+
+  //minnesota
+  var voyageurs = new google.maps.LatLng(48.483596, -92.834633);
+  
+  //montana
+  var glacier = new google.maps.LatLng(48.744099, -113.834899);
+
+  //nevada
+  var basin = new google.maps.LatLng(38.979696, -114.299785);
+
+  //n. dakota
+  var teddy = new google.maps.LatLng(46.971918, -103.539331);
+
+  // ohio
+  var cuyahoga = new google.maps.LatLng(41.277088, -81.569399);
+
+  //s. carolina
+  var congaree = new google.maps.LatLng(33.791811, -80.776682);
+
+  //s. dakota
+  var badlands = new google.maps.LatLng(43.850659, -102.376615);
+  var wind = new google.maps.LatLng(43.604643, -103.431733);
+
+  // texas
+  var bigbend = new google.maps.LatLng(29.125427, -103.242108);
+
+  // virgin islands
+  var virgin = new google.maps.LatLng(18.342095, -64.750327); 
+
+  // utah
+  var arches = new google.maps.LatLng(38.728538, -109.591144); 
+  var capitol = new google.maps.LatLng(38.365846, -111.269305); 
+  var canyonlands = new google.maps.LatLng(38.316107, -109.884148); 
+
+  // virginia
+  var shenandoah = new google.maps.LatLng(38.267851, -78.709071); 
+
+  // washington
+  var ncascades = new google.maps.LatLng(48.768568, -121.305044);
+
+  // Alaska
+  let denaliMark = new google.maps.Marker({
     position: denali,
-    title:"Denali"
+    title:"Denali",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
+    }
   });
+
   denaliMark.setMap(map);
 
-  var glacierbayMark = new google.maps.Marker({
+  let glacierbayMark = new google.maps.Marker({
     position: glacierbay,
-    title:"Glacier Bay"
+    title:"Glacier Bay",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
+    }
   });
   glacierbayMark.setMap(map);
 
-  var kenaiMark = new google.maps.Marker({
+  let kenaiMark = new google.maps.Marker({
     position: kenai,
-    title:"Kenai Fjords"
+    title:"Kenai Fjords",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
+    }
   });
   kenaiMark.setMap(map);
 
   // Arizona
-  var grandcanyonMark = new google.maps.Marker({
+  let grandcanyonMark = new google.maps.Marker({
     position: grandcanyon,
-    title:"Grand Canyon"
+    title:"Grand Canyon",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
+    }
   });
   grandcanyonMark.setMap(map);
 
-  var saguaroMark = new google.maps.Marker({
+  let saguaroMark = new google.maps.Marker({
     position: saguaro,
-    title:"Saguaro"
+    title:"Saguaro",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
+    }
   });
   saguaroMark.setMap(map);
   
   // California
-  var deathvalleyMark = new google.maps.Marker({
+  let deathvalleyMark = new google.maps.Marker({
     position: deathvalley,
-    title:"Death Valley"
+    title:"Death Valley",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
+    }
   }); 
   deathvalleyMark.setMap(map);
 
-  var joshuatreeMark = new google.maps.Marker({
+  let joshuatreeMark = new google.maps.Marker({
     position: joshuatree,
-    title:"Joshua Tree"
+    title:"Joshua Tree",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
+    }
   }); 
   joshuatreeMark.setMap(map);
 
-  var kingscanyonMark = new google.maps.Marker({
+  let kingscanyonMark = new google.maps.Marker({
     position: kingscanyon,
-    title:"Kings Canyon"
+    title:"Kings Canyon",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
+    }
   }); 
   kingscanyonMark.setMap(map);
 
-  var lassenvolcanicMark = new google.maps.Marker({
+  let lassenvolcanicMark = new google.maps.Marker({
     position: lassenvolcanic,
-    title:"Lassen Volcanic"
+    title:"Lassen Volcanic",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
+    }
   }); 
   lassenvolcanicMark.setMap(map);
 
-  var redwoodMark = new google.maps.Marker({
+  let redwoodMark = new google.maps.Marker({
     position: redwood,
-    title:"Redwood"
+    title:"Redwood",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
+    }
   }); 
   redwoodMark.setMap(map);
 
-  var sequoiaMark = new google.maps.Marker({
+  let sequoiaMark = new google.maps.Marker({
     position: sequoia,
-    title:"Sequoia"
+    title:"Sequoia",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
+    }
   }); 
   sequoiaMark.setMap(map);
 
-  var yosemiteMark = new google.maps.Marker({
+  let yosemiteMark = new google.maps.Marker({
     position: yosemite,
-    title:"Yosemite"
+    title:"Yosemite",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
+    }
   });  
   yosemiteMark.setMap(map);
 
   // Florida
-  var biscayneMark = new google.maps.Marker({
+  let biscayneMark = new google.maps.Marker({
     position: biscayne,
-    title:"Biscayne"
+    title:"Biscayne",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
+    }
   }); 
   biscayneMark.setMap(map);
 
-  var evergladesMark = new google.maps.Marker({
+  let evergladesMark = new google.maps.Marker({
     position: everglades,
-    title:"Everglades"
+    title:"Everglades",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
+    }
   });  
   evergladesMark.setMap(map);
 
   // Hawaii
-  var hawaiiVolcMark = new google.maps.Marker({
+  let hawaiiVolcMark = new google.maps.Marker({
     position: hawaiivolcanoes,
-    title:"Hawaii Volcanoes"
+    title:"Hawaii Volcanoes",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
+    }
   });  
   hawaiiVolcMark.setMap(map);
 
   // New Mexico
-  var carlsbadMark = new google.maps.Marker({
+  let carlsbadMark = new google.maps.Marker({
     position: carlsbad,
-    title:"Carlsbad Caverns"
+    title:"Carlsbad Caverns",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
+    }
   });  
   carlsbadMark.setMap(map);
 
   // Oregon
-  var craterlakeMark = new google.maps.Marker({
+  let craterlakeMark = new google.maps.Marker({
     position: craterlake,
-    title:"Crater Lake"
+    title:"Crater Lake",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
+    }
   });  
   craterlakeMark.setMap(map);
 
   // Tennessee
-  var greatsmokyMark = new google.maps.Marker({
+  let greatsmokyMark = new google.maps.Marker({
     position: greatsmoky,
-    title:"Great Smoky Mountains"
+    title:"Great Smoky Mountains",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
+    }
   });  
   greatsmokyMark.setMap(map);
 
   // Texas
-  var guadalupeMark = new google.maps.Marker({
+  let guadalupeMark = new google.maps.Marker({
     position: guadalupe,
-    title:"Guadalupe Mountains"
+    title:"Guadalupe Mountains",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
+    }
   });  
   guadalupeMark.setMap(map);
 
   // Utah
-  var bryceMark = new google.maps.Marker({
+  let bryceMark = new google.maps.Marker({
     position: bryce,
-    title:"Bryce Canyon"
+    title:"Bryce Canyon",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
+    }
   }); 
   bryceMark.setMap(map);
 
-  var zionMark = new google.maps.Marker({
+  let zionMark = new google.maps.Marker({
     position: zion,
-    title:"Zion"
+    title:"Zion",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
+    }
   });  
   zionMark.setMap(map);
   
   // Washington
-  var rainierMark = new google.maps.Marker({
+  let rainierMark = new google.maps.Marker({
     position: rainier,
-    title:"Mount Rainier"
+    title:"Mount Rainier",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
+    }
   }); 
   rainierMark.setMap(map);
 
-  var olympicMark = new google.maps.Marker({
+  let olympicMark = new google.maps.Marker({
     position: olympic,
-    title:"Olympic"
+    title:"Olympic",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
+    }
   });  
   olympicMark.setMap(map);
  
   // Wyoming
-  var tetonMark = new google.maps.Marker({
+  let tetonMark = new google.maps.Marker({
     position: teton,
-    title:"Grand Teton"
+    title:"Grand Teton",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
+    }
   }); 
   tetonMark.setMap(map);
 
-  var yellowstoneMark = new google.maps.Marker({
+  let yellowstoneMark = new google.maps.Marker({
     position: yellowstone,
-    title:"Yellowstone"
+    title:"Yellowstone",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
+    }
   });  
   yellowstoneMark.setMap(map);
+
+//not been
+let gatesMark = new google.maps.Marker({
+    position: gates,
+    title:"Gates of the Arctic",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
+    }
+  });
+
+gatesMark.setMap(map);
+
+  let katmaiMark = new google.maps.Marker({
+    position: katmai,
+    title:"Katmai",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
+    }
+  });
+  katmaiMark.setMap(map);
+
+  let kobukMark = new google.maps.Marker({
+    position: kobuk,
+    title:"Kobuk Valley",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
+    }
+  });
+
+  kobukMark.setMap(map);
+
+let clarkMark = new google.maps.Marker({
+    position: clark,
+    title:"Lake Clark",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
+    }
+  });
+  clarkMark.setMap(map);
+
+let wrangellMark = new google.maps.Marker({
+    position: wrangell,
+    title:"Wrangell-St. Elias",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
+    }
+  });
+
+wrangellMark.setMap(map);
+
+let samoaMark = new google.maps.Marker({
+    position: samoa,
+    title:"American Samoa",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
+    }
+  });
+samoaMark.setMap(map);
+
+let petrifiedMark = new google.maps.Marker({
+    position: petrified,
+    title:"Petrified Forest",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
+    }
+  });
+
+petrifiedMark.setMap(map);
+
+let springsMark = new google.maps.Marker({
+    position: springs,
+    title:"Hot Springs",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
+    }
+  });
+springsMark.setMap(map);
+
+let channelMark = new google.maps.Marker({
+    position: channel,
+    title:"Channel Islands",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
+    }
+  });
+
+channelMark.setMap(map);
+
+let blackMark = new google.maps.Marker({
+    position: black,
+    title:"Black Canyon of the Gunnison",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
+    }
+  });
+
+blackMark.setMap(map);
+
+let dunesMark = new google.maps.Marker({
+    position: dunes,
+    title:"Great Sand Dunes",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
+    }
+  });
+
+dunesMark.setMap(map);
+
+let mesaMark = new google.maps.Marker({
+    position: mesa,
+    title:"Mesa Verde",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
+    }
+  });
+
+mesaMark.setMap(map);
+
+let rockyMark = new google.maps.Marker({
+    position: rocky,
+    title:"Rocky Mountain",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
+    }
+  });
+
+rockyMark.setMap(map);
+
+let tortMark = new google.maps.Marker({
+    position: tortugas,
+    title:"Dry Tortugas",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
+    }
+  });
+
+tortMark.setMap(map);
+
+let haleakalaMark = new google.maps.Marker({
+    position: haleakala,
+    title:"Haleakala",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
+    }
+  });
+
+haleakalaMark.setMap(map);
+
+let mammothMark = new google.maps.Marker({
+    position: mammoth,
+    title:"Mammoth Cave",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
+    }
+  });
+
+mammothMark.setMap(map);
+
+let acadiaMark = new google.maps.Marker({
+    position: acadia,
+    title:"Acadia",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
+    }
+  });
+
+acadiaMark.setMap(map);
+
+let isleMark = new google.maps.Marker({
+    position: isle,
+    title:"Isle Royale",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
+    }
+  });
+
+isleMark.setMap(map);
+
+let voyageursMark = new google.maps.Marker({
+    position: voyageurs,
+    title:"Voyageurs",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
+    }
+  });
+
+voyageursMark.setMap(map);
+
+let glacierMark = new google.maps.Marker({
+    position: glacier,
+    title:"Glacier",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
+    }
+  });
+
+glacierMark.setMap(map);
+
+let basinMark = new google.maps.Marker({
+    position: basin,
+    title:"Great Basin",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
+    }
+  });
+
+basinMark.setMap(map);
+
+let teddyMark = new google.maps.Marker({
+    position: teddy,
+    title:"Theodore Roosevelt",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
+    }
+});
+
+teddyMark.setMap(map);
+
+let cuyahogaMark = new google.maps.Marker({
+    position: cuyahoga,
+    title:"Cuyahoga Valley",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
+    }
+});
+
+cuyahogaMark.setMap(map);
+
+let congareeMark = new google.maps.Marker({
+    position: congaree,
+    title:"Congaree",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
+    }
+});
+
+congareeMark.setMap(map);
+
+let badlandsMark = new google.maps.Marker({
+    position: badlands,
+    title:"Badlands",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
+    }
+});
+
+badlandsMark.setMap(map);
+
+let windMark = new google.maps.Marker({
+    position: wind,
+    title:"Wind Cave",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
+    }
+});
+
+windMark.setMap(map);
+
+let bigbendMark = new google.maps.Marker({
+    position: bigbend,
+    title:"Big Bend",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
+    }
+});
+
+bigbendMark.setMap(map);
+
+let virginMark = new google.maps.Marker({
+    position: virgin,
+    title:"Virgin Islands",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
+    }
+});
+
+virginMark.setMap(map);
+
+let archesMark = new google.maps.Marker({
+    position: arches,
+    title:"Arches",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
+    }
+});
+
+archesMark.setMap(map);
+
+let capitolMark = new google.maps.Marker({
+    position: capitol,
+    title:"Capitol Reef",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
+    }
+});
+
+capitolMark.setMap(map);
+
+let canyonlandsMark = new google.maps.Marker({
+    position: canyonlands,
+    title:"Canyonlands",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
+    }
+});
+
+canyonlandsMark.setMap(map);
+
+let shenandoahMark = new google.maps.Marker({
+    position: shenandoah,
+    title:"Shenandoah",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
+    }
+});
+
+shenandoahMark.setMap(map);
+
+let ncascadesMark = new google.maps.Marker({
+    position: ncascades,
+    title:"North Cascades",
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
+    }
+});
+
+ncascadesMark.setMap(map);
+
 }
 
 /** Creates a chart and adds it to the page. */
