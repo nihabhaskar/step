@@ -4,24 +4,14 @@
     <meta charset="UTF-8">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="script.js"></script>
     <script src="nav.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2e6NZkMasOwEC1et7VznaQAdbU9NnlHE"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   </head>
 
-<body>
-    
-    <!-- NAVIGATION BAR -->
-    <!-- 
-    <div class="topnav">
-        <a href="#Top">Top</a>
-        <a class = "active" href="#aboutMe">About Me</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Work Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#freeTime">Free Time</a>
-    </div>
-    -->
+<body onload = "loadTasks(); createMap();">
 
     <nav>
         <ul id="mainNav">
@@ -31,22 +21,15 @@
             <li><a href="#experience">Work Experience</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#freeTime">Free Time</a></li>
+            <li><a href="#nationalParks">National Parks</a></li>
+            <li><a href="#books">Books</a></li>
+            <li><a href="#comments">Comments</a></li>
         </ul>
     </nav>
     
     <!-- TOP OF PAGE SECTION -->
     <section id="top">
     <div class = "wrapper" id="first section"> 
-        
-        <!--
-        <div class= "left"> 
-            <div class="image-thumbnails">
-                <img src="images/grandP.jpg"/>
-            </div>
-            <p class = "nametext">Niharika Bhaskar</p>
-            <p class = "titletext">Computer Science Student</p>
-        </div>
-        -->
     
         <div class = "right">
             <div class = "bio">
@@ -215,57 +198,63 @@
 
             <!-- Full-width images with number and caption text -->
             <div class="mySlides fade" style="display: block;">
-                <div class="numbertext">1 / 9</div>
-                <img src="slideshow/family.jpg" style="width:100%">
+                <div class="numbertext">1 / 10</div>
+                <img src="slideshow/potato.jpg" style="width:100%">
                 <div class="text">Hiking Potato Chip Rock with my Family.</div>
             </div>
 
             <div class="mySlides fade">
-                <div class="numbertext">2 / 9</div>
+                <div class="numbertext">2 / 10</div>
                 <img src="slideshow/rainier.jpg" style="width:100%">
                 <div class="text">A view from hiking around Mt.Rainier</div>
             </div>
 
             <div class="mySlides fade">
-                <div class="numbertext">3 / 9</div>
-                <img src="slideshow/iscream.jpg" style="width:100%">
+                <div class="numbertext">3 / 10</div>
+                <img src="slideshow/icecream.jpg" style="width:100%">
                 <div class="text">I love making &#38 eating icecream</div>
             </div>
 
             <div class="mySlides fade">
-                <div class="numbertext">4 / 9</div>
+                <div class="numbertext">4 / 10</div>
                 <img src="slideshow/crater.jpg" style="width:100%">
                 <div class="text">Hiking around Crater Lake.</div>
             </div>
 
             <div class="mySlides fade">
                 <div class="numbertext">5 / 9</div>
-                <img src="slideshow/pizzaparty.jpg" style="width:100%">
+                <img src="slideshow/pizza.jpg" style="width:100%">
                 <div class="text">A pizza making party with friends.</div>
             </div>
 
             <div class="mySlides fade">
-                <div class="numbertext">6 / 9</div>
+                <div class="numbertext">6 / 10</div>
                 <img src="slideshow/bread.jpg" style="width:100%">
                 <div class="text">I love baking, here is a loaf of bread I made recently.</div>
             </div>
 
             <div class="mySlides fade">
-                <div class="numbertext">7 / 9</div>
+                <div class="numbertext">7 / 10</div>
                 <img src="slideshow/hawaii.jpg" style="width:100%">
                 <div class="text">Enjoying views of Mauna Loa In Hawaii.</div>
             </div>
 
             <div class="mySlides fade">
-                <div class="numbertext">8 / 9</div>
-                <img src="slideshow/roommates.jpg" style="width:100%">
+                <div class="numbertext">8 / 10</div>
+                <img src="slideshow/late.jpg" style="width:100%">
                 <div class="text">Late night ice scream eating with friends.</div>
             </div>
 
             <div class="mySlides fade">
-                <div class="numbertext">9 / 9</div>
+                <div class="numbertext">9 / 10</div>
                 <img src="slideshow/ruby.jpg" style="width:100%">
                 <div class="text">Walking along Ruby Beach in Olympic National Park.</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">10 / 10</div>
+                <img src="slideshow/kombucha.jpg" style="width:100%">
+                <div class="text">Taste testing kombucha!</div>
             </div>
 
             <!-- Next and previous buttons -->
@@ -286,11 +275,16 @@
             <span class="dot" onclick="currentSlide(7)"></span>
             <span class="dot" onclick="currentSlide(8)"></span>
             <span class="dot" onclick="currentSlide(9)"></span>
+            <span class="dot" onclick="currentSlide(10)"></span>
         </div>
     </div>
     </section>
 
+    
     <!--
+        
+        Leaving this commented, for possible use of random fact generator page
+
     <div class = "wrapper">
         <p>Click here to get a random message:</p>
         <button onclick="addRandomFact()">Fun Fact</button>
@@ -298,6 +292,119 @@
         <p> My name is Niharika Bhaskar, I am an incoming 3rd year at UCSD majoring in Computer Science and minoring in Economics.</p>
     </div>
     -->
+
+    <section id="nationalParks">
+    <div class="wrapper2" id="nationalParks">
+        <h1>National Parks</h1>
+        <hr>
+        <br>
+        <br>
+        <figcaption>Have Been</figcaption>
+        <img src="images/green.jpg">
+        <figcaption>Want to Visit</figcaption>
+        <img src="images/yellow.jpg">
+        <br>
+        <br>
+        <div id="map"></div>
+        <br>
+        <br>
+    </div>
+    </section>
+
+    <section id="books">
+    <div class="wrapper2" id="books">
+        <h1>Books</h1>
+        <hr>
+        <br>
+        <h3 style="text-align: left">Recently Read Favorites:</h3>
+        <br>
+
+        <div class="wrapcenter" align='center' style="width: 100%; padding: 20px;">
+        
+          <div class="column" style="float:left; width: 70%;" >
+           
+           
+
+           <h4>Historical Fiction</h4>
+           <ul style="width:100%">
+               <li>The Vanishing Half</li>
+               <li>The Kite Runner</li>
+               <li>Where the Crawdads Sing</li>
+               <li>Nightrunners of Bengal</li>
+               <li>The Yellow Bird Sings</li>
+           </ul>
+
+           <h4>Non Fiction</h4>
+           <ul style="width:100%">
+               <li>The Lemon Tree:An Arab, a Jew, and the Heart of the Middle East</li>
+               <li>A Woman of No Importance:The Untold Story of the American Spy Who Helped Win World War II</li>
+               <li>Traffic: Why We DRive the Way We Do and What It Says About Us</li>
+               <li>Educated</li>
+               <li>The Immortal Life of Henrietta Lacks</li>
+               <li>The Silenced Cry: One Woman's Diary of a Journey to Afghanistan</li>
+               <li>Silent Spring</li>
+               <li>A Russian Diary: A Journalist's Final Account of Life, Corruption &#38; Death in Putin's Russia</li>
+            </ul>
+
+           <h4>Fiction</h4>
+            <ul style="width:100%">
+               <li>The Sellout</li>
+               <li>A Woman of No Importance:The Untold Story of the American Spy Who Helped Win World War II</li>
+               <li>The President Is Missing</li>
+               <li>Lord of the Flies</li>
+               <li>Crazy Rich Asians</li>
+               <li>The Handmaid's Tale</li>
+               <li>The Great Gatsby</li>
+            </ul>
+
+            <h4>Biography</h4>
+            <ul style="width:100%">  
+               <li>Becoming</li>
+               <li>The Diary of Young Girl</li>
+               <li>Born a Crime: Stories From a South African Childhood</li>
+            </ul>
+
+          </div>
+
+          <div id="chart-container" style="float:left; width: 30%;" ></div>
+
+        </div>
+        <br>
+
+         <a class="goodreadsLink" href="https://www.goodreads.com/user/show/118012264-niharika-bhaskar">Checkout My GoodReads</a>
+
+        <br>
+        <br>
+    </div>
+    </section>
+    
+    <section id="comments">
+    <div id="wrapper2" id = "comments">
+
+      <h1 style="text-align:center; font-size: 35px; color: #1f222b; font-weight: bold; font-family: 'Roboto', sans-serif">Comments</h1>
+      <hr>
+
+      <br>
+
+      <form action="/data" method="POST" style="margin-left:75px"> 
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="comments">Comments:</label><br>
+        <input type="text" id="comments" name="comments"><br><br>
+
+        <!--
+        <label for="numComments">Number of Comments:</label><br>
+        <input type="number" name="player-choice" min="1" value="1">
+        -->
+
+        <input type="submit" value="Submit" style="margin-left:250px"> 
+      </form>
+
+    <ul id="task-list"></ul>
+
+    </div>
+    </section>
 
 </body>
 

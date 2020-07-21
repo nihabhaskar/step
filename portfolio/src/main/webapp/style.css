@@ -53,28 +53,24 @@ html, body {
   display: flex;
   flex-direction: row;
   height: 500px;
-  /*position: fixed; */
 }
 
 .wrapper2 {
   background-color: #d9e0e2;
   max-width: 100%;
-  /*display: flex;*/  
   flex-direction: column;
-  /*height: 500px;*/
- text-align: center;
-  /*position: fixed; */
+  text-align: center;
 }
 
 .wrapper3 {
-    background-color: #1f222b;
-    height: 400px;
-    border-radius:15px;
-    margin-left: auto;
-    margin-right: auto;
-    width:100%;
-    max-width:90%;
-    box-shadow: 10px 10px 15px #1f222b;
+  background-color: #1f222b;
+  height: 400px;
+  border-radius:15px;
+  margin-left: auto;
+  margin-right: auto;
+  width:100%;
+  max-width:90%;
+  box-shadow: 10px 10px 15px #1f222b;
 }
 
 .left, .right {
@@ -198,7 +194,7 @@ html, body {
 }
 
 .wrapper2 li {
-    font-size: 18px;
+    font-size: 16px;
     color: #1f222b;
     margin-left: 140px;
     margin-right: 300px;
@@ -213,6 +209,15 @@ html, body {
     text-align: left;
     line-height: 1.5;
     color: #1f222b;
+}
+
+.wrapper2 a {
+    color: #785964;
+    font-size: 20px;
+}
+
+.wrapper2 a:hover, a:active {
+  background-color: #a4bcc4;
 }
 
 .center {
@@ -240,7 +245,6 @@ hr {
 .rightAbout {
   align-items: right;
   justify-content: center;
-  /*margin: 50px;*/
 }
 
 .gImage {
@@ -291,7 +295,6 @@ hr {
     font-size: 18px;
     color: #f4f3f3;
     margin-left: 100px;
-    /*margin-right:400px;*/
     padding-top: 9px;
     font-family: 'Roboto', sans-serif;  
     font-weight: normal;
@@ -325,7 +328,6 @@ hr {
 }
 
 /* SLIDESHOW */
-
 /* Slideshow container */
 .slideshow-container {
   max-width: 700px;
@@ -478,4 +480,79 @@ section{
   padding: 0;  
   display:block;
   z-index: 0;
+}
+
+/* COMMENTS */
+input[type=text], select {
+  width: 60%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 30%;
+  background-color: #93B7BE;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #D5C7BC
+}
+
+#task-list {
+  list-style-type: none;
+}
+
+.task {  
+  display: flex;
+  margin: 10px;
+  padding: 10px;
+  width: 80%;
+}
+
+.task span {
+  flex-grow: 1;
+}
+
+#map {
+  border: thin solid black;
+  height: 450px;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 75%;
+}
+
+th {
+  text-align: left;
+}
+
+table, td, th {
+  border: 1px solid black;
+}
+
+.wrapcenter {
+    display:inline-block;
+    margin: 0 auto;
+}
+
+#clear {
+    clear: both;
+}
+
+#goodreadsLink {
+    float:left;
 }
